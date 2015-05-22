@@ -12,6 +12,10 @@ class torque::server (
     ensure => directory,
   }
 
+  user { 'torque2':
+    ensure => present,
+  }
+
   exec { 'create pbs_server database':
     command     => '/usr/share/doc/torque-server-5.1.0/torque.setup root',
     refreshonly => true,
