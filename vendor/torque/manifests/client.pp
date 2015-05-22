@@ -19,7 +19,7 @@ class torque::client (
 
   @@concat::fragment { "torque_node_${::clientcert}":
     target  => "${torque::torque_home}/server_priv/nodes",
-    content => "${::fqdn}\n",
+    content => "${::fqdn} np=${::processorcount}\n",
     tag     => $torque::cluster_tag,
     order   => $::clientcert,
   }
