@@ -1,0 +1,14 @@
+{
+  "Gemfile": "eb3d950035001961ebb14ccac5630345",
+  "Rakefile": "d953eb985f82600dc3b9ac6e1f2cfe64",
+  "files/agent/shell/job.rb": "0fa1c7d34fa1797caea430ddafb3f95e",
+  "files/agent/shell.ddl": "2f7e0ec859b3c0b01086005ecb666430",
+  "files/agent/shell.rb": "a5284ff866517a62851faba42bec7b69",
+  "files/application/shell/prefix_stream_buf.rb": "bb50acf7a7d45831bc955c6885e0806e",
+  "files/application/shell/watcher.rb": "6594e6efca42ed396416bddc0d8a6c07",
+  "files/application/shell.rb": "8436bb44388751872de1a5dced80569e",
+  "manifests/init.pp": "6a6c99a0bd5fec0ef0c8efd4d4a06292",
+  "metadata.json": "f21539d0fbc2a68306f0fda4cfd86fc7",
+  "spec/classes/pe_mco_shell_agent_spec.rb": "c66f81c8373b327f0861327a689d3444",
+  "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc"
+}
