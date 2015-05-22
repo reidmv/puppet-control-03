@@ -8,6 +8,17 @@ class torque::server (
     ensure => installed,
   }
 
+  file { '/var/spool/torque/checkpoint':
+    ensure => directory,
+  }
+
+  exec { 'create pbs_server database':
+    command     => '/usr/share/doc/torque-server-5.1.0/torque.setup root',
+    refreshonly => true,
+    subscribe   => Package['torque-server'],
+    before      => Service['pbs_server'],
+  }
+
   service { 'pbs_server':
     ensure  => running,
     enable  => true,
