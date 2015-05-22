@@ -20,7 +20,7 @@ class torque::server (
 
   concat { $nodefile:
     ensure => present,
-    notify => Service['torque-server'],
+    notify => Service['pbs_server'],
   }
 
   Concat::Fragment <<| tag == $torque::cluster_tag and target == $nodefile |>>
