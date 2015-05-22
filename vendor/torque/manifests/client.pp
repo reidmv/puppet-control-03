@@ -21,7 +21,6 @@ class torque::client (
     target  => "${torque::torque_home}/server_priv/nodes",
     content => "${::fqdn}\n",
     tag     => $torque::cluster_tag,
-    notify  => Service['pbs_mom'],
   }
 
 }
