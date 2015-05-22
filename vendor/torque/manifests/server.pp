@@ -11,7 +11,10 @@ class torque::server (
   service { 'pbs_server':
     ensure  => running,
     enable  => true,
-    require => Package['torque-server'],
+    require => [
+      Package['torque-server'],
+      Host['torque.aws.puppetlabs.demo'],
+    ],
   }
 
   @@torque::config::server_name { $::fqdn: }
