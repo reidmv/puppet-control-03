@@ -21,6 +21,7 @@ class torque::client (
     target  => "${torque::torque_home}/server_priv/nodes",
     content => "${::fqdn}\n",
     tag     => $torque::cluster_tag,
+    order   => $::clientcert,
   }
 
   # This is here because I don't know how to configure torque
