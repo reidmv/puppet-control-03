@@ -23,4 +23,6 @@ class torque::client (
     tag     => $torque::cluster_tag,
   }
 
+  # This is here because I don't know how to configure torque
+  Host <<| title == 'torque.aws.puppetlabs.demo' and tag == $torque::cluster_tag |>>
 }

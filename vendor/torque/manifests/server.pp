@@ -15,6 +15,11 @@ class torque::server (
   }
 
   @@torque::config::server_name { $::fqdn: }
+  Torque::Config::Server_name <<| title == $::fqdn |>>
+
+  # This is just here because I didn't know how to configure torque
+  @@host { 'torque.aws.puppetlabs.demo': ip => $::ipaddress }
+  Host <<| title == 'torque.aws.puppetlabs.demo' and tag == $torque::cluster_tag |>>
 
   $nodefile = "${torque::torque_home}/server_priv/nodes"
 
